@@ -1,5 +1,6 @@
 <?php namespace Yalcinkaya\Tinymce;
 
+Use URL;
 
 class Tinymce {
 
@@ -8,7 +9,7 @@ class Tinymce {
     public function make($name, array $args)
     {
         if($name == 'load'){
-            $html = '<script type="text/javascript" src="/packages/yalcinkaya/tinymce/tinymce.min.js"></script>
+            $html = '<script type="text/javascript" src="'. URL::to('/packages/yalcinkaya/tinymce/tinymce.min.js').'"></script>
                     <script type="text/javascript">
                     tinymce.init({
                             selector: "textarea",
